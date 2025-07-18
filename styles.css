@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
     transition: var(--transition-medium);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .navbar {
@@ -189,6 +189,31 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     position: relative;
     z-index: 2;
+}
+
+/* =================================
+   ESTILOS PARA HEADER DINÂMICO
+   ================================= */
+
+/* Transições suaves para os elementos do header */
+.header .navbar,
+.header .nav-logo h1,
+.header .nav-slogan {
+    transition: all 0.3s ease;
+}
+
+/* Estado do header quando a página é rolada */
+.header.scrolled .navbar {
+    padding: 0.5rem 0; /* Diminui o preenchimento vertical */
+}
+
+.header.scrolled .nav-logo h1 {
+    font-size: 1.8rem; /* Diminui o tamanho da fonte do logo */
+}
+
+.header.scrolled .nav-slogan {
+    font-size: 0; /* Faz o slogan desaparecer */
+    opacity: 0;
 }
 
 .hero-title {
@@ -1391,3 +1416,181 @@ a:focus {
     }
 }
 
+/* =================================
+   ESTILOS DA PÁGINA DE BLOG
+   ================================= */
+
+/* Seção Hero do Blog */
+.blog-hero {
+    background: var(--gradient-light);
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.blog-hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Container principal da página de blog */
+.blog-page-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Coluna única em mobile */
+    gap: var(--spacing-xxl);
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xxl);
+}
+
+/* Layout de duas colunas para telas maiores */
+@media (min-width: 992px) {
+    .blog-page-container {
+        grid-template-columns: 2.5fr 1fr; /* Coluna principal 2.5x maior que a sidebar */
+    }
+}
+
+
+/* Resumo de cada post no blog */
+.blog-post-summary {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: var(--spacing-xl);
+    transition: var(--transition-medium);
+}
+
+.blog-post-summary:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    transform: translateY(-5px);
+}
+
+.blog-post-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.blog-post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.blog-post-meta span i {
+    margin-right: var(--spacing-xs);
+    color: var(--secondary-color);
+}
+
+.blog-post-summary h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.blog-post-summary p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.blog-read-more {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.blog-read-more:hover {
+    color: var(--secondary-color);
+}
+
+
+/* Barra Lateral (Sidebar) */
+.blog-sidebar .sidebar-widget {
+    background: #F8FBF6;
+    padding: var(--spacing-lg);
+    border-radius: 10px;
+    margin-bottom: var(--spacing-xl);
+    border: 1px solid var(--border-color);
+}
+
+.blog-sidebar h4 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.sidebar-widget ul {
+    list-style: none;
+}
+
+.sidebar-widget ul li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.sidebar-widget ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+}
+
+.sidebar-widget ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Formulário de pesquisa */
+.search-form {
+    display: flex;
+}
+
+.search-form input {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    padding: 0.8rem;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-form button {
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0 1rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xl);
+}
+
+.pagination a {
+    color: var(--primary-color);
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
