@@ -124,7 +124,7 @@
                     <br><br>
                     Aliamos práticas integrativas, como a acupuntura, à medicina baseada em evidências para oferecer um cuidado completo, que considera não apenas os sintomas, mas também os aspectos físicos, emocionais, sociais e espirituais da saúde. Transformamos a experiência do cuidado com um olhar ampliado, humano e resolutivo.
                 </p>
-                <a href="#agendamento" class="cta-button">Agende sua visita domiciliar</a>
+                <a href="#agendamento" class="cta-button">Agende sua consulta</a>
             </div>
             <div class="hero-image">
                 <img src="images/medico_familia.jpg" alt="Médico cuidando de gerações de uma família" loading="lazy">
@@ -170,6 +170,13 @@
                     </div>
                     <h3>Integração entre Saberes</h3>
                     <p>Combinação da medicina tradicional com práticas complementares - Medicina tradicional Chinesa e Acupuntura.</p>
+                </div>                
+                <div class="valor-card">
+                    <div class="valor-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Telemedicina</h3>
+                    <p>Telemedicina é cuidado médico à distância. Conta com profissionais capacitados, escuta qualificada e atenção humanizada — onde você estiver, no seu tempo.</p>
                 </div>
                 <div class="valor-card">
                     <div class="valor-icon">
@@ -186,7 +193,7 @@
         <div class="container">
             <h2>Quem Somos</h2>
             <div class="intro-text">
-                <h3>Cuidado de Verdade, com Olhar Integral</h3>
+                <h3>Oferecemos um cuidado integral, centrado na pessoa, que alia a escuta qualificada da Medicina de Família e Comunidade aos recursos terapêuticos da Acupuntura. Com vínculo, responsabilidade e respeito à singularidade de cada indivíduo, promovemos saúde de forma humanizada e resolutiva</h3>
                 <p>
                     O Dr. Gilberto Alves e a Dra. Juliana Vasel são médicos especialistas em Medicina de Família e Comunidade, com formação complementar em Acupuntura, comprometidos com um cuidado de saúde próximo, humano e contínuo.
                 </p>
@@ -319,6 +326,27 @@
                         sem pressa ou limitações de horário.</p>
                     </div>
                 </div>
+                <div class="servico-card featured">
+                    <div class="servico-icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3>Telemedicina</h3>
+                    <p>
+                        Atendimento médico online com segurança e praticidade, direto do seu celular ou computador. 
+                        Ideal para consultas de rotina, orientações rápidas e acompanhamento contínuo, sem sair de casa.
+                    </p>
+                    <ul class="servico-lista">
+                        <li>Consultas por vídeo com profissionais qualificados</li>
+                        <li>Prescrição de medicamentos com assinatura digital</li>
+                        <li>Avaliação de exames à distância</li>
+                        <li>Acompanhamento de doenças crônicas</li>
+                        <li>Orientações médicas urgentes sem deslocamento</li>
+                    </ul>
+                    <div class="servico-destaque">
+                        <p><strong>Diferencial:</strong> Agilidade no atendimento com conforto, privacidade 
+                        e suporte técnico acessível a qualquer momento.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -355,16 +383,12 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="data">Data Desejada *</label>
-                        <input type="date" id="data" name="data" required>
-                    </div>
-                    <div class="form-group">
                         <label for="horario">Horário Preferido</label>
                         <select id="horario" name="horario">
                             <option value="">Selecione um horário</option>
-                            <option value="manha">Manhã (8h às 12h)</option>
+                            <option value="manha">Manhã (7h às 12h)</option>
                             <option value="tarde">Tarde (13h às 17h)</option>
-                            <option value="noite">Noite (18h às 20h)</option>
+                            <option value="noite">Noite (17h às 20h)</option>
                         </select>
                     </div>
                 </div>
@@ -373,21 +397,25 @@
                     <div class="checkbox-group">
                         <label class="checkbox-label">
                             <input type="checkbox" name="atendimento" value="medicina-familia">
-                            Medicina da Família
+                            Medicina da Família e Comunidade
                         </label>
                         <label class="checkbox-label">
                             <input type="checkbox" name="atendimento" value="acupuntura">
                             Acupuntura
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="atendimento" value="ambos">
-                            Ambos
+                            <input type="checkbox" name="atendimento" value="visita_domiciliar">
+                            Visita Domiciliar
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="atendimento" value="telemedicina">
+                            Telemedicina
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="comentarios">Comentários Adicionais</label>
-                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Descreva brevemente o motivo da consulta, sintomas ou outras informações relevantes..."></textarea>
+                    <label for="observacoes">Observações Adicionais</label>
+                    <textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva brevemente o motivo da consulta, sintomas ou outras informações relevantes..."></textarea>
                 </div>
                 <button type="submit" class="submit-button">
                     <i class="fas fa-calendar-check"></i>
